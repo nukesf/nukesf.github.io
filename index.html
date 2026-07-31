@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nick Sanchez — Healthcare Business Analyst</title>
+<meta name="description" content="Nick Sanchez: business analyst in healthcare IT. Pharmacy operations background, EHR-vendor internship, dashboards and data quality work. Tampa Bay / remote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF7F2;
+  --ink:#1C2B2A;
+  --ink-soft:#4A5C5A;
+  --teal:#0E6B5C;
+  --teal-deep:#0A4F44;
+  --rule:#D9D2C7;
+  --card:#FFFFFF;
+  --tag:#EDE7DC;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'IBM Plex Sans',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.65;
+  font-size:17px;
+  background-image:radial-gradient(circle at 1px 1px, rgba(28,43,42,.05) 1px, transparent 0);
+  background-size:26px 26px;
+}
+h1,h2,h3{font-family:'Fraunces',serif;line-height:1.15;letter-spacing:-0.01em}
+a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(14,107,92,.35);transition:border-color .2s,color .2s}
+a:hover{color:var(--teal-deep);border-bottom-color:var(--teal-deep)}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:sticky;top:0;background:rgba(250,247,242,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);z-index:10}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;max-width:960px;margin:0 auto}
+.nav-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);border:none}
+.nav-links a{border:none;color:var(--ink-soft);font-size:.85rem;margin-left:22px;letter-spacing:.02em}
+.nav-links a:hover{color:var(--teal)}
+
+/* hero */
+header{padding:88px 0 64px;border-bottom:1px solid var(--rule)}
+.kicker{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
+h1{font-size:clamp(2.3rem,6vw,3.6rem);font-weight:600;max-width:15ch}
+.lede{font-size:1.15rem;color:var(--ink-soft);max-width:56ch;margin-top:22px}
+.hero-meta{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 26px;font-family:var(--mono);font-size:.8rem;color:var(--ink-soft)}
+.hero-meta span::before{content:"›";color:var(--teal);margin-right:8px}
+.hero-links{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 20px;border:1.5px solid var(--ink);border-radius:2px;color:var(--ink);font-size:.88rem;font-weight:500;transition:all .18s}
+.btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn.primary:hover{background:var(--teal-deep);border-color:var(--teal-deep)}
+.pulse{display:block;margin-top:46px;max-width:520px;opacity:.85}
+
+/* reveal on load */
+.reveal{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}.d5{animation-delay:.45s}
+
+/* sections */
+section{padding:64px 0;border-bottom:1px solid var(--rule)}
+.sec-label{font-family:var(--mono);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+h2{font-size:1.9rem;font-weight:600;margin-bottom:28px}
+.two-col{display:grid;grid-template-columns:1.6fr 1fr;gap:40px}
+@media(max-width:720px){.two-col{grid-template-columns:1fr}}
+.about p+p{margin-top:16px}
+.facts{background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:24px;font-size:.9rem;height:fit-content}
+.facts dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:14px}
+.facts dt:first-child{margin-top:0}
+.facts dd{margin-top:3px}
+
+/* experience */
+.job{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--rule)}
+.job:first-of-type{border-top:none;padding-top:0}
+@media(max-width:720px){.job{grid-template-columns:1fr;gap:6px}}
+.job-when{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);padding-top:5px}
+.job h3{font-size:1.15rem;font-weight:600}
+.job .org{color:var(--teal);font-weight:500}
+.job ul{margin:12px 0 0 18px}
+.job li{margin-top:8px;color:var(--ink-soft);font-size:.95rem}
+.job li strong{color:var(--ink);font-weight:600}
+.job .subtitle{font-size:.85rem;color:var(--ink-soft);font-family:var(--mono);margin-top:2px}
+
+/* case studies */
+.case{background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:36px;margin-top:30px;position:relative;transition:box-shadow .25s,transform .25s}
+.case:hover{box-shadow:0 10px 30px rgba(28,43,42,.08);transform:translateY(-2px)}
+.case-num{position:absolute;top:30px;right:34px;font-family:'Fraunces',serif;font-size:2.6rem;font-weight:700;color:var(--tag)}
+.case h3{font-size:1.45rem;font-weight:600;max-width:22ch}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
+.tag{background:var(--tag);border-radius:2px;padding:3px 10px;font-family:var(--mono);font-size:.7rem;letter-spacing:.05em;color:var(--ink-soft)}
+.case h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin:24px 0 8px}
+.case p{color:var(--ink-soft);font-size:.96rem}
+.case p strong{color:var(--ink)}
+.case ul{margin:8px 0 0 18px;color:var(--ink-soft);font-size:.96rem}
+.case li{margin-top:6px}
+.stat-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+.stat{border:1px solid var(--rule);border-radius:2px;padding:12px 18px;min-width:130px}
+.stat b{display:block;font-family:'Fraunces',serif;font-size:1.5rem;color:var(--teal);font-weight:700}
+.stat span{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* skills */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+@media(max-width:720px){.skills-grid{grid-template-columns:1fr}}
+.skills-grid h3{font-size:1.05rem;font-weight:600;margin-bottom:12px;padding-bottom:10px;border-bottom:2px solid var(--teal)}
+.skills-grid li{list-style:none;padding:6px 0;color:var(--ink-soft);font-size:.92rem;border-bottom:1px dashed var(--rule)}
+
+/* contact */
+.contact-big{font-family:'Fraunces',serif;font-size:clamp(1.4rem,4vw,2.1rem);font-weight:600}
+footer{padding:34px 0 46px;font-family:var(--mono);font-size:.75rem;color:var(--ink-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Nick Sanchez</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Case Studies</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+
+<header>
+  <p class="kicker reveal d1">Business Analyst · Healthcare IT &amp; Analytics</p>
+  <h1 class="reveal d2">Healthcare data, made trustworthy.</h1>
+  <p class="lede reveal d3">I've worked healthcare from both ends: three years behind a pharmacy counter, and now inside an EHR vendor analyzing the data a partner ecosystem runs on. I build analytics people actually use, and I verify my own numbers before anyone else has to.</p>
+  <div class="hero-meta reveal d4">
+    <span>Palmetto, FL · Tampa Bay</span>
+    <span>Remote or on-site to Tampa</span>
+    <span>Available January 2027</span>
+    <span>English / Español</span>
+  </div>
+  <div class="hero-links reveal d5">
+    <a class="btn primary" href="mailto:nminaya04@gmail.com">Email me</a>
+    <a class="btn" href="https://www.linkedin.com/in/nick-sanchez-983669347/">LinkedIn</a>
+    <a class="btn" href="https://github.com/nukesf">GitHub</a>
+    <a class="btn" href="Nick-Sanchez-Resume.pdf">Résumé (PDF)</a>
+  </div>
+  <svg class="pulse reveal d5" viewBox="0 0 520 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0 30 H150 L165 12 L185 48 L200 22 L212 30 H320 L335 8 L358 52 L372 30 H520" stroke="#0E6B5C" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity=".8"/>
+  </svg>
+</header>
+
+<section id="about">
+  <p class="sec-label">01 — About</p>
+  <h2>From the pharmacy counter to the data behind it</h2>
+  <div class="two-col">
+    <div class="about">
+      <p>Three years as a certified pharmacy technician taught me what healthcare data looks like when it fails: rejected claims, prescription queues, a patient waiting while you untangle an insurance record. I earned my CPhT and kept asking why the systems worked the way they did. So I went after the systems side.</p>
+      <p>Today I'm a business analyst intern at <strong>Veradigm</strong> on the Connect team, working on the data an EHR partner ecosystem runs on: partner-program analytics, support-ticket analysis at scale, and a data-quality dashboard our team presented to senior leadership.</p>
+      <p>The through-line in my work is trust. A dashboard nobody can trace gets ignored, so I reconcile my numbers against source data field by field, and I cut any claim the evidence doesn't back. I use AI tools openly for build speed, and I verify the output myself before anything ships.</p>
+      <p>I graduate from the University of South Florida in December 2026 with a B.S. in Business Information Systems, and I'm looking for business analyst and healthcare analytics roles starting January 2027.</p>
+    </div>
+    <dl class="facts">
+      <dt>Currently</dt><dd>BA Intern, Veradigm Connect</dd>
+      <dt>Education</dt><dd>B.S. Business Information Systems, USF · Dec 2026</dd>
+      <dt>Certification</dt><dd>CPhT (Certified Pharmacy Technician)</dd>
+      <dt>Core tools</dt><dd>SQL · Excel · Power BI · Tableau</dd>
+      <dt>Domain</dt><dd>EHR / EMR · pharmacy ops · insurance claims · HIPAA-aware</dd>
+      <dt>Languages</dt><dd>English · Spanish (fluent)</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="experience">
+  <p class="sec-label">02 — Experience</p>
+  <h2>Where I've worked</h2>
+
+  <div class="job">
+    <div class="job-when">Jun 2026 — Present</div>
+    <div>
+      <h3>Business Analyst Intern · <span class="org">Veradigm</span></h3>
+      <p class="subtitle">Veradigm Connect — developer portal &amp; App Expo partner marketplace · Remote</p>
+      <ul>
+        <li>Built a <strong>four-tab analytics dashboard</strong> consolidating 3,000+ certification, client-activation, and subscription records for the partner program, with record-level drill-down and CSV export on every metric.</li>
+        <li>Analyzed <strong>~11,000 developer-support tickets across 700+ vendors</strong> to baseline a support-reduction initiative; found a small group of vendors drove nearly half of ticket volume.</li>
+        <li>Owned <strong>interface design and alert routing</strong> for a four-person team's EHR data-quality dashboard, presented to senior leadership at Veradigm's internal innovation challenge.</li>
+        <li>Audited and rewrote vendor listings across the <strong>App Expo marketplace</strong> against a standardized content framework, coordinating validation outreach with dozens of vendor partners.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="job-when">Aug 2022 — Present</div>
+    <div>
+      <h3>Pharmacy Technician · <span class="org">CVS, then Walmart</span></h3>
+      <p class="subtitle">Palmetto &amp; Bradenton, FL</p>
+      <ul>
+        <li>Four years of high-volume prescription and insurance-claim processing in enterprise pharmacy systems, under strict accuracy and confidentiality standards. CPhT earned Dec 2025.</li>
+        <li>Trained team members on pharmacy systems and digital prescription workflows; the front-line healthcare experience behind everything above.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="job-when">Jan 2022 — Jan 2023</div>
+    <div>
+      <h3>Volunteer Data Analyst · <span class="org">Turning Points</span></h3>
+      <p class="subtitle">Homeless-services nonprofit · Bradenton, FL</p>
+      <ul>
+        <li>Cleaned, validated, and analyzed service-utilization and outcome data; prepared summaries used in grant reporting and operational decisions.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <p class="sec-label">03 — Case Studies</p>
+  <h2>Selected work</h2>
+  <p style="color:var(--ink-soft);max-width:62ch">Three projects from my Veradigm internship, written to respect confidentiality: aggregate figures only, no client or vendor names, no internal system detail. Happy to go deeper on process and decisions in conversation.</p>
+
+  <article class="case">
+    <div class="case-num">01</div>
+    <h3>A single source of truth for a partner program</h3>
+    <div class="tags"><span class="tag">EXCEL → DASHBOARD</span><span class="tag">DATA RECONCILIATION</span><span class="tag">STAKEHOLDER REPORTING</span></div>
+    <h4>The problem</h4>
+    <p>A healthcare partner program's reporting lived across separate workbooks: certifications in one place, client activation requests in another, subscription accounts in a third. Answering a basic program question meant manual digging, and no two answers were guaranteed to match.</p>
+    <h4>What I did</h4>
+    <p>I consolidated the program's records into a four-tab analytics dashboard covering certifications, activations, subscriptions, and a partner directory. Every metric drills down to the underlying records and exports to CSV, so any number on screen can be traced and taken away.</p>
+    <h4>The judgment call</h4>
+    <p>Before shipping, I reconciled the dashboard field by field against the source workbooks and dropped any figure the sources couldn't support. Trust was the feature: a metric nobody can trace gets ignored, and a wrong one gets remembered.</p>
+    <h4>Outcome</h4>
+    <p>Program questions that used to require opening three workbooks now have one answer in one place. The dashboard went through 18 versions of stakeholder feedback and reconciliation passes before I called it done.</p>
+    <div class="stat-row">
+      <div class="stat"><b>3,000+</b><span>records consolidated</span></div>
+      <div class="stat"><b>4</b><span>integrated views</span></div>
+      <div class="stat"><b>100%</b><span>metrics traceable to source</span></div>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="case-num">02</div>
+    <h3>Baselining support burden across 700+ vendors</h3>
+    <div class="tags"><span class="tag">DATA ANALYSIS</span><span class="tag">TAXONOMY DESIGN</span><span class="tag">PERFORMANCE ENGINEERING</span></div>
+    <h4>The problem</h4>
+    <p>A support-reduction initiative needed a starting line. Roughly 11,000 developer-support tickets spanning 700+ vendors existed only as unstructured titles in a queue. Nobody could say where the burden actually came from, so nobody could say whether it was shrinking.</p>
+    <h4>What I did</h4>
+    <p>I derived a two-level classification taxonomy (12 categories, ~35 topics) from the unstructured ticket titles and applied it across the full dataset with zero uncategorized records. That made the distribution visible for the first time: a small group of vendors drove nearly half of all ticket volume, and self-service opportunities clustered in a handful of predictable categories.</p>
+    <h4>The judgment call</h4>
+    <p>The analysis shipped as a self-contained browser dashboard, which started at 2.3&nbsp;MB and was too heavy to share. I rebuilt the data layer with dictionary encoding, column-oriented storage, and compression, cutting it to 466&nbsp;KB. I used AI tools heavily for the refactor, then verified full data parity myself across every record and field before anyone saw it. Faster is worthless if it's quietly wrong.</p>
+    <h4>Outcome</h4>
+    <p>The initiative got measurable baselines for its key results, and leadership got a shareable view of where support effort actually goes instead of anecdotes about it.</p>
+    <div class="stat-row">
+      <div class="stat"><b>~11K</b><span>tickets analyzed</span></div>
+      <div class="stat"><b>0</b><span>uncategorized records</span></div>
+      <div class="stat"><b>4.9×</b><span>smaller payload, full parity</span></div>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="case-num">03</div>
+    <h3>An EHR data-quality dashboard, presented to leadership</h3>
+    <div class="tags"><span class="tag">UX &amp; VISUALIZATION</span><span class="tag">ALERT DESIGN</span><span class="tag">TEAM OF 4 · 5 WEEKS</span></div>
+    <h4>The problem</h4>
+    <p>Healthcare data analysts working inside a client's EHR data can't easily see when data quality slips, or where. Our four-person team entered Veradigm's internal innovation challenge with a data-quality dashboard built for exactly that person, and five weeks to make it real.</p>
+    <h4>What I owned</h4>
+    <p>Two of the six workstreams: the interface and the alerting. The design rule for the interface was the first thirty seconds: opening the dashboard should tell you what's wrong, where, and how serious, before you click anything. The alerting side was about who hears when a metric slips, and how to route that without drowning people in noise.</p>
+    <h4>The judgment call</h4>
+    <p>Privacy shaped the design as much as usability: views masked by default, small cells suppressed, every data reveal written to a log. And a week before presenting, we cut every claim the shipped code didn't actually back. Our refresh ran on a daily cycle, not in real time, and saying that plainly on stage beat getting caught on it in Q&amp;A.</p>
+    <h4>Outcome</h4>
+    <p>We presented to a senior leadership panel in July 2026 and took five minutes of questions tougher than any of our dry runs, which is what we had practiced for. Precise beat polished.</p>
+    <div class="stat-row">
+      <div class="stat"><b>15:00</b><span>on the leadership clock</span></div>
+      <div class="stat"><b>2 of 6</b><span>workstreams owned</span></div>
+      <div class="stat"><b>30s</b><span>time-to-understanding target</span></div>
+    </div>
+  </article>
+</section>
+
+<section id="skills">
+  <p class="sec-label">04 — Skills</p>
+  <h2>What I work with</h2>
+  <div class="skills-grid">
+    <div>
+      <h3>Analytics &amp; data</h3>
+      <ul>
+        <li>SQL</li>
+        <li>Excel (advanced: PivotTables, XLOOKUP, SUMIFS)</li>
+        <li>Power BI</li>
+        <li>Tableau</li>
+        <li>Python</li>
+        <li>Data cleaning, validation &amp; reconciliation</li>
+        <li>Dashboard design &amp; development</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Healthcare domain</h3>
+      <ul>
+        <li>EHR / EMR ecosystems</li>
+        <li>Pharmacy operations (CPhT)</li>
+        <li>Insurance claims workflows</li>
+        <li>HIPAA-aware data handling</li>
+        <li>FHIR / HL7 (conceptual)</li>
+        <li>Healthcare partner &amp; marketplace ops</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ways of working</h3>
+      <ul>
+        <li>Requirements gathering</li>
+        <li>Stakeholder communication</li>
+        <li>Technical documentation</li>
+        <li>AI-assisted analysis, hand-verified</li>
+        <li>Process &amp; workflow analysis</li>
+        <li>English / Spanish (fluent)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:none">
+  <p class="sec-label">05 — Contact</p>
+  <h2>Let's talk</h2>
+  <p class="contact-big"><a href="mailto:nminaya04@gmail.com">nminaya04@gmail.com</a></p>
+  <p style="margin-top:18px;color:var(--ink-soft);max-width:56ch">Open to business analyst, data analyst, and healthcare analytics roles. Remote, or on-site anywhere in Tampa Bay. Starting January 2027, conversations welcome now.</p>
+  <div class="hero-links" style="margin-top:26px">
+    <a class="btn" href="https://www.linkedin.com/in/nick-sanchez-983669347/">LinkedIn</a>
+    <a class="btn" href="https://github.com/nukesf">GitHub</a>
+    <a class="btn" href="Nick-Sanchez-Resume.pdf">Résumé (PDF)</a>
+  </div>
+</section>
+
+</div>
+
+<footer class="wrap">
+  <span>© 2026 Nick Sanchez</span>
+  <span>Palmetto, FL · Tampa Bay · Remote</span>
+</footer>
+
+</body>
+</html>
