@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nick Sanchez — Healthcare Business Analyst</title>
-<meta name="description" content="Nick Sanchez: business analyst in healthcare IT. Pharmacy operations background, EHR-vendor internship, dashboards and data quality work. Tampa Bay / remote.">
+<title>Nick Sanchez — Business &amp; Data Analyst</title>
+<meta name="description" content="Nick Sanchez: business and data analyst. Dashboards, data quality, and operational analysis across healthcare IT, retail operations, nonprofit programs, and public datasets. SQL, Excel, Power BI, Tableau. Tampa Bay / remote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -42,12 +42,13 @@ nav{position:sticky;top:0;background:rgba(250,247,242,.92);backdrop-filter:blur(
 .nav-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);border:none}
 .nav-links a{border:none;color:var(--ink-soft);font-size:.85rem;margin-left:22px;letter-spacing:.02em}
 .nav-links a:hover{color:var(--teal)}
+@media(max-width:640px){.nav-links a{margin-left:14px;font-size:.78rem}}
 
 /* hero */
 header{padding:88px 0 64px;border-bottom:1px solid var(--rule)}
 .kicker{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
-h1{font-size:clamp(2.3rem,6vw,3.6rem);font-weight:600;max-width:15ch}
-.lede{font-size:1.15rem;color:var(--ink-soft);max-width:56ch;margin-top:22px}
+h1{font-size:clamp(2.3rem,6vw,3.6rem);font-weight:600;max-width:17ch}
+.lede{font-size:1.15rem;color:var(--ink-soft);max-width:60ch;margin-top:22px}
 .hero-meta{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 26px;font-family:var(--mono);font-size:.8rem;color:var(--ink-soft)}
 .hero-meta span::before{content:"›";color:var(--teal);margin-right:8px}
 .hero-links{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px}
@@ -55,7 +56,7 @@ h1{font-size:clamp(2.3rem,6vw,3.6rem);font-weight:600;max-width:15ch}
 .btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}
 .btn.primary:hover{background:var(--teal-deep);border-color:var(--teal-deep)}
-.pulse{display:block;margin-top:46px;max-width:520px;opacity:.85}
+.motif{display:block;margin-top:46px;max-width:540px;width:100%;opacity:.9}
 
 /* reveal on load */
 .reveal{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
@@ -66,6 +67,7 @@ h1{font-size:clamp(2.3rem,6vw,3.6rem);font-weight:600;max-width:15ch}
 section{padding:64px 0;border-bottom:1px solid var(--rule)}
 .sec-label{font-family:var(--mono);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
 h2{font-size:1.9rem;font-weight:600;margin-bottom:28px}
+.intro{color:var(--ink-soft);max-width:64ch;margin-top:-14px;margin-bottom:8px}
 .two-col{display:grid;grid-template-columns:1.6fr 1fr;gap:40px}
 @media(max-width:720px){.two-col{grid-template-columns:1fr}}
 .about p+p{margin-top:16px}
@@ -73,6 +75,18 @@ h2{font-size:1.9rem;font-weight:600;margin-bottom:28px}
 .facts dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:14px}
 .facts dt:first-child{margin-top:0}
 .facts dd{margin-top:3px}
+
+/* what I do — problem types */
+.problems{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+@media(max-width:820px){.problems{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.problems{grid-template-columns:1fr}}
+.problem{background:var(--card);padding:24px 22px}
+.problem h3{font-size:1.02rem;font-weight:600;margin-bottom:8px}
+.problem p{font-size:.88rem;color:var(--ink-soft);line-height:1.55}
+.domains{margin-top:26px;font-size:.93rem;color:var(--ink-soft)}
+.domains strong{color:var(--ink);font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:8px}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chip{border:1px solid var(--rule);background:var(--card);border-radius:2px;padding:5px 12px;font-size:.83rem}
 
 /* experience */
 .job{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--rule)}
@@ -89,19 +103,20 @@ h2{font-size:1.9rem;font-weight:600;margin-bottom:28px}
 /* case studies */
 .case{background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:36px;margin-top:30px;position:relative;transition:box-shadow .25s,transform .25s}
 .case:hover{box-shadow:0 10px 30px rgba(28,43,42,.08);transform:translateY(-2px)}
+@media(max-width:560px){.case{padding:26px 22px}}
 .case-num{position:absolute;top:30px;right:34px;font-family:'Fraunces',serif;font-size:2.6rem;font-weight:700;color:var(--tag)}
-.case h3{font-size:1.45rem;font-weight:600;max-width:22ch}
+.case h3{font-size:1.45rem;font-weight:600;max-width:24ch}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
 .tag{background:var(--tag);border-radius:2px;padding:3px 10px;font-family:var(--mono);font-size:.7rem;letter-spacing:.05em;color:var(--ink-soft)}
 .case h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin:24px 0 8px}
 .case p{color:var(--ink-soft);font-size:.96rem}
 .case p strong{color:var(--ink)}
-.case ul{margin:8px 0 0 18px;color:var(--ink-soft);font-size:.96rem}
-.case li{margin-top:6px}
 .stat-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
 .stat{border:1px solid var(--rule);border-radius:2px;padding:12px 18px;min-width:130px}
 .stat b{display:block;font-family:'Fraunces',serif;font-size:1.5rem;color:var(--teal);font-weight:700}
 .stat span{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.transfers{margin-top:24px;padding-top:16px;border-top:1px dashed var(--rule);font-size:.9rem;color:var(--ink-soft)}
+.transfers b{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:5px}
 
 /* skills */
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
@@ -121,9 +136,9 @@ footer{padding:34px 0 46px;font-family:var(--mono);font-size:.75rem;color:var(--
     <a class="nav-name" href="#top">Nick Sanchez</a>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#experience">Experience</a>
+      <a href="#what">What I Do</a>
       <a href="#work">Case Studies</a>
-      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -132,9 +147,9 @@ footer{padding:34px 0 46px;font-family:var(--mono);font-size:.75rem;color:var(--
 <div class="wrap" id="top">
 
 <header>
-  <p class="kicker reveal d1">Business Analyst · Healthcare IT &amp; Analytics</p>
-  <h1 class="reveal d2">Healthcare data, made trustworthy.</h1>
-  <p class="lede reveal d3">I've worked healthcare from both ends: three years behind a pharmacy counter, and now inside an EHR vendor analyzing the data a partner ecosystem runs on. I build analytics people actually use, and I verify my own numbers before anyone else has to.</p>
+  <p class="kicker reveal d1">Business &amp; Data Analyst · Dashboards · Data Quality · Operations</p>
+  <h1 class="reveal d2">Messy data, made decision-ready.</h1>
+  <p class="lede reveal d3">I like the unglamorous part of analytics: reconciling numbers until they hold up, structuring data nobody has organized yet, and building dashboards where every figure traces back to its source. I've done that across healthcare IT, retail and pharmacy operations, nonprofit programs, and public datasets in transit, media, and advertising.</p>
   <div class="hero-meta reveal d4">
     <span>Palmetto, FL · Tampa Bay</span>
     <span>Remote or on-site to Tampa</span>
@@ -147,46 +162,179 @@ footer{padding:34px 0 46px;font-family:var(--mono);font-size:.75rem;color:var(--
     <a class="btn" href="https://github.com/nukesf">GitHub</a>
     <a class="btn" href="Nick-Sanchez-Resume.pdf">Résumé (PDF)</a>
   </div>
-  <svg class="pulse reveal d5" viewBox="0 0 520 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M0 30 H150 L165 12 L185 48 L200 22 L212 30 H320 L335 8 L358 52 L372 30 H520" stroke="#0E6B5C" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity=".8"/>
+  <svg class="motif reveal d5" viewBox="0 0 540 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0 44 L18 20 L32 52 L46 14 L58 46 L72 24 L86 54 L100 18 L114 48 L128 28 L142 50 L156 22 L170 42 L186 32"
+          stroke="#9AA5A3" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M186 32 C240 32 250 30 290 26 C340 21 400 15 540 9"
+          stroke="#0E6B5C" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="540" cy="9" r="3.2" fill="#0E6B5C"/>
+    <line x1="186" y1="4" x2="186" y2="60" stroke="#D9D2C7" stroke-width="1" stroke-dasharray="3 3"/>
   </svg>
 </header>
 
 <section id="about">
   <p class="sec-label">01 — About</p>
-  <h2>From the pharmacy counter to the data behind it</h2>
+  <h2>I learned data where the stakes were concrete</h2>
   <div class="two-col">
     <div class="about">
-      <p>Three years as a certified pharmacy technician taught me what healthcare data looks like when it fails: rejected claims, prescription queues, a patient waiting while you untangle an insurance record. I earned my CPhT and kept asking why the systems worked the way they did. So I went after the systems side.</p>
-      <p>Today I'm a business analyst intern at <strong>Veradigm</strong> on the Connect team, working on the data an EHR partner ecosystem runs on: partner-program analytics, support-ticket analysis at scale, and a data-quality dashboard our team presented to senior leadership.</p>
-      <p>The through-line in my work is trust. A dashboard nobody can trace gets ignored, so I reconcile my numbers against source data field by field, and I cut any claim the evidence doesn't back. I use AI tools openly for build speed, and I verify the output myself before anything ships.</p>
-      <p>I graduate from the University of South Florida in December 2026 with a B.S. in Business Information Systems, and I'm looking for business analyst and healthcare analytics roles starting January 2027.</p>
+      <p>Three years as a certified pharmacy technician taught me what bad data actually costs. A rejected insurance claim isn't an abstraction at the counter — it's a person waiting while you work out which field is wrong. That's what pushed me toward the systems side, and it's still how I think about analytics: someone downstream has to act on this, so it had better be right.</p>
+      <p>I'm finishing a B.S. in Business Information Systems at the University of South Florida (December 2026), and this summer I've been a business analyst intern at <strong>Veradigm</strong>, working on partner-program analytics, support-operations analysis at scale, and internal data-quality tooling.</p>
+      <p>The work travels. A fragmented reporting problem looks the same whether the records are certifications, invoices, or shipments. Ticket queues behave like ticket queues in every industry. I've run analysis on healthcare data, nonprofit program outcomes, retail transactions, and open public datasets covering transit ridership, video performance, and ad spending — and the method didn't change much between them.</p>
+      <p>I use AI tools openly for build speed, then verify the output myself, field by field, against source data. Faster is worthless if it's quietly wrong.</p>
     </div>
     <dl class="facts">
-      <dt>Currently</dt><dd>BA Intern, Veradigm Connect</dd>
-      <dt>Education</dt><dd>B.S. Business Information Systems, USF · Dec 2026</dd>
-      <dt>Certification</dt><dd>CPhT (Certified Pharmacy Technician)</dd>
-      <dt>Core tools</dt><dd>SQL · Excel · Power BI · Tableau</dd>
-      <dt>Domain</dt><dd>EHR / EMR · pharmacy ops · insurance claims · HIPAA-aware</dd>
+      <dt>Currently</dt><dd>Business Analyst Intern, Veradigm</dd>
+      <dt>Education</dt><dd>B.S. Business Information Systems, USF · Dec 2026 · GPA 3.4</dd>
+      <dt>Core tools</dt><dd>SQL · Excel · Power BI · Tableau · Python</dd>
+      <dt>Also certified</dt><dd>CPhT · Certiport Entrepreneurship &amp; Small Business</dd>
+      <dt>Looking for</dt><dd>Business analyst · data analyst · BI · operations analyst</dd>
       <dt>Languages</dt><dd>English · Spanish (fluent)</dd>
     </dl>
   </div>
 </section>
 
+<section id="what">
+  <p class="sec-label">02 — What I Do</p>
+  <h2>The problems I'm built for</h2>
+  <p class="intro">These are industry-agnostic. The domain changes what the records are called; it doesn't change the work.</p>
+  <div class="problems">
+    <div class="problem">
+      <h3>Fragmented reporting</h3>
+      <p>Numbers scattered across workbooks and systems, where no two answers match. I consolidate them into one traceable view.</p>
+    </div>
+    <div class="problem">
+      <h3>Unstructured operational data</h3>
+      <p>Thousands of free-text records nobody has categorized. I build the taxonomy, apply it fully, and make the distribution visible.</p>
+    </div>
+    <div class="problem">
+      <h3>Baselines &amp; KPI definition</h3>
+      <p>An initiative with a goal but no starting line. I establish what "today" measures so progress becomes provable.</p>
+    </div>
+    <div class="problem">
+      <h3>Data quality &amp; validation</h3>
+      <p>Reconciling outputs against source systems, finding what doesn't tie, and cutting figures the evidence won't support.</p>
+    </div>
+    <div class="problem">
+      <h3>Dashboards &amp; internal tools</h3>
+      <p>Interfaces built around the first thirty seconds: what's wrong, where, and how serious — before anyone clicks.</p>
+    </div>
+    <div class="problem">
+      <h3>Service &amp; support analytics</h3>
+      <p>Where volume concentrates, what's deflectable, and which segment of customers or vendors drives the load.</p>
+    </div>
+  </div>
+  <div class="domains">
+    <strong>Domains I've worked in</strong>
+    <div class="chip-row">
+      <span class="chip">Healthcare IT &amp; EHR ecosystems</span>
+      <span class="chip">Insurance claims</span>
+      <span class="chip">Pharmacy &amp; retail operations</span>
+      <span class="chip">Partner / vendor marketplaces</span>
+      <span class="chip">Nonprofit program data</span>
+      <span class="chip">Transit &amp; mobility</span>
+      <span class="chip">Media &amp; advertising</span>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <p class="sec-label">03 — Case Studies</p>
+  <h2>Selected work</h2>
+  <p class="intro">Three projects from my Veradigm internship plus one cross-industry analysis set. The internship work is written to respect confidentiality: aggregate figures only, no client or vendor names, no internal system detail. Each one notes where the same approach transfers.</p>
+
+  <article class="case">
+    <div class="case-num">01</div>
+    <h3>Three workbooks, one dashboard, zero untraceable numbers</h3>
+    <div class="tags"><span class="tag">DATA CONSOLIDATION</span><span class="tag">RECONCILIATION</span><span class="tag">STAKEHOLDER REPORTING</span></div>
+    <h4>The problem</h4>
+    <p>A partner program's reporting lived in separate workbooks — one for certifications, one for client activation requests, one for subscription accounts. Answering a basic program question meant opening all three, and no two answers were guaranteed to agree.</p>
+    <h4>What I did</h4>
+    <p>Consolidated 3,000+ records into a four-tab analytics dashboard with a shared structure across views. Every metric drills down to the underlying records and exports to CSV, so any number on screen can be traced and taken away by whoever's asking.</p>
+    <h4>The judgment call</h4>
+    <p>Before shipping I reconciled the dashboard field by field against the source workbooks and dropped every figure the sources couldn't support. Trust was the actual feature: a metric nobody can trace gets ignored, and a wrong one gets remembered.</p>
+    <h4>Outcome</h4>
+    <p>Questions that used to require three files now have one answer in one place. It took 18 versions of stakeholder feedback and reconciliation passes before I called it done.</p>
+    <div class="stat-row">
+      <div class="stat"><b>3,000+</b><span>records consolidated</span></div>
+      <div class="stat"><b>4</b><span>integrated views</span></div>
+      <div class="stat"><b>100%</b><span>metrics traceable to source</span></div>
+    </div>
+    <p class="transfers"><b>Transfers to</b>Sales and revenue ops reporting, vendor and supplier programs, finance reconciliation, membership or subscription reporting — anywhere the same entity is tracked in more than one system.</p>
+  </article>
+
+  <article class="case">
+    <div class="case-num">02</div>
+    <h3>Finding where support burden actually comes from</h3>
+    <div class="tags"><span class="tag">TAXONOMY DESIGN</span><span class="tag">OPERATIONS ANALYSIS</span><span class="tag">PERFORMANCE ENGINEERING</span></div>
+    <h4>The problem</h4>
+    <p>A support-reduction initiative had a goal but no starting line. Roughly 11,000 support tickets across 700+ vendor accounts existed only as unstructured titles in a queue. Nobody could say where the burden came from, so nobody could prove it was shrinking.</p>
+    <h4>What I did</h4>
+    <p>Derived a two-level classification taxonomy (12 categories, ~35 topics) from the free-text titles and applied it across the full dataset with zero records left uncategorized. That exposed the distribution for the first time: a small group of accounts drove nearly half of all volume, and self-service opportunities clustered in a handful of predictable categories.</p>
+    <h4>The judgment call</h4>
+    <p>The analysis shipped as a self-contained browser dashboard that started at 2.3&nbsp;MB — too heavy to share. I rebuilt the data layer with dictionary encoding, column-oriented storage, and compression, cutting it to 466&nbsp;KB, then verified full data parity myself across every record and field before anyone saw it.</p>
+    <h4>Outcome</h4>
+    <p>The initiative got measurable baselines for its key results, and leadership got a shareable view of where support effort actually goes instead of anecdotes about it.</p>
+    <div class="stat-row">
+      <div class="stat"><b>~11K</b><span>tickets analyzed</span></div>
+      <div class="stat"><b>0</b><span>uncategorized records</span></div>
+      <div class="stat"><b>4.9×</b><span>smaller payload, full parity</span></div>
+    </div>
+    <p class="transfers"><b>Transfers to</b>Customer support and success analytics in any industry, SaaS onboarding, call-center and service-desk operations, ecommerce returns analysis, IT service management — every queue-based system has this same hidden concentration.</p>
+  </article>
+
+  <article class="case">
+    <div class="case-num">03</div>
+    <h3>An internal tool for people who can't see their own data</h3>
+    <div class="tags"><span class="tag">UX &amp; VISUALIZATION</span><span class="tag">ALERT DESIGN</span><span class="tag">TEAM OF 4 · 5 WEEKS</span></div>
+    <h4>The problem</h4>
+    <p>Analysts working inside a client's data had no easy way to see when data quality slipped, or where. Our four-person team entered the company's internal innovation challenge with a data-quality monitoring dashboard, and five weeks to make it real.</p>
+    <h4>What I owned</h4>
+    <p>Two of six workstreams: the interface and the alerting. The design rule for the interface was the first thirty seconds — opening it should tell you what's wrong, where, and how serious, before you click anything. The alerting side was about who gets told when a metric slips, and how to route that without drowning people in noise.</p>
+    <h4>The judgment call</h4>
+    <p>Access control shaped the design as much as usability: views masked by default, small groups suppressed to protect individuals, every data reveal written to a log. And a week before presenting, we cut every claim the shipped code didn't actually back — our refresh ran on a daily cycle, not in real time, and saying so plainly beat getting caught on it in Q&amp;A.</p>
+    <h4>Outcome</h4>
+    <p>We presented to a senior leadership panel and took five minutes of questions harder than any of our dry runs, which is what we'd practiced for. Precise beat polished.</p>
+    <div class="stat-row">
+      <div class="stat"><b>15:00</b><span>on the leadership clock</span></div>
+      <div class="stat"><b>2 of 6</b><span>workstreams owned</span></div>
+      <div class="stat"><b>30s</b><span>time-to-understanding target</span></div>
+    </div>
+    <p class="transfers"><b>Transfers to</b>Internal tooling and admin interfaces, data governance and observability programs, alerting and on-call design, any product where role-based permissions and audit trails matter — finance, HR systems, education, government.</p>
+  </article>
+
+  <article class="case">
+    <div class="case-num">04</div>
+    <h3>A dozen public datasets, four unrelated industries</h3>
+    <div class="tags"><span class="tag">TABLEAU</span><span class="tag">EXCEL MODELING</span><span class="tag">EXPLORATORY ANALYSIS</span></div>
+    <h4>The problem</h4>
+    <p>Through USF's Global Career Accelerator, I worked through roughly a dozen public datasets from domains with nothing in common: transportation, streaming media, municipal transit, and advertising.</p>
+    <h4>What I did</h4>
+    <p>Built Tableau dashboards and Excel models across NYC taxi fare data, YouTube trending-video performance, BART ridership, and Super Bowl advertising — using calculated fields, PivotTables, and XLOOKUP to surface behavioral and distribution patterns in each.</p>
+    <h4>Why it's here</h4>
+    <p>It's the clearest evidence that my method isn't domain-bound. Different subject matter, same discipline: understand how the data was collected, find what's missing or miscoded, then look for the pattern that answers an actual question rather than the one that looks good on a chart.</p>
+    <div class="stat-row">
+      <div class="stat"><b>~12</b><span>public datasets</span></div>
+      <div class="stat"><b>4</b><span>unrelated domains</span></div>
+    </div>
+    <p class="transfers"><b>Transfers to</b>Any analyst role where you'll be handed unfamiliar data and expected to get oriented fast — which is most of them.</p>
+  </article>
+</section>
+
 <section id="experience">
-  <p class="sec-label">02 — Experience</p>
+  <p class="sec-label">04 — Experience</p>
   <h2>Where I've worked</h2>
 
   <div class="job">
     <div class="job-when">Jun 2026 — Present</div>
     <div>
       <h3>Business Analyst Intern · <span class="org">Veradigm</span></h3>
-      <p class="subtitle">Veradigm Connect — developer portal &amp; App Expo partner marketplace · Remote</p>
+      <p class="subtitle">Partner program &amp; developer platform operations · Remote</p>
       <ul>
-        <li>Built a <strong>four-tab analytics dashboard</strong> consolidating 3,000+ certification, client-activation, and subscription records for the partner program, with record-level drill-down and CSV export on every metric.</li>
-        <li>Analyzed <strong>~11,000 developer-support tickets across 700+ vendors</strong> to baseline a support-reduction initiative; found a small group of vendors drove nearly half of ticket volume.</li>
-        <li>Owned <strong>interface design and alert routing</strong> for a four-person team's EHR data-quality dashboard, presented to senior leadership at Veradigm's internal innovation challenge.</li>
-        <li>Audited and rewrote vendor listings across the <strong>App Expo marketplace</strong> against a standardized content framework, coordinating validation outreach with dozens of vendor partners.</li>
+        <li>Built a <strong>four-tab analytics dashboard</strong> consolidating 3,000+ certification, client-activation, and subscription records, with record-level drill-down and CSV export on every metric.</li>
+        <li>Analyzed <strong>~11,000 support tickets across 700+ vendor accounts</strong> to baseline a support-reduction initiative; found a small group of accounts drove nearly half of all volume.</li>
+        <li>Cross-referenced a <strong>512-account aging report against ~9,400 vendor records under a same-day deadline</strong>, delivering verified matches classified by license status while excluding low-confidence matches to avoid false positives.</li>
+        <li>Owned <strong>interface design and alert routing</strong> for a four-person team's data-quality dashboard, presented to senior leadership at the company's internal innovation challenge.</li>
+        <li>Audited and rewrote partner listings across a <strong>public marketplace</strong> against a standardized content framework, coordinating validation outreach with dozens of vendor partners.</li>
       </ul>
     </div>
   </div>
@@ -197,8 +345,8 @@ footer{padding:34px 0 46px;font-family:var(--mono);font-size:.75rem;color:var(--
       <h3>Pharmacy Technician · <span class="org">CVS, then Walmart</span></h3>
       <p class="subtitle">Palmetto &amp; Bradenton, FL</p>
       <ul>
-        <li>Four years of high-volume prescription and insurance-claim processing in enterprise pharmacy systems, under strict accuracy and confidentiality standards. CPhT earned Dec 2025.</li>
-        <li>Trained team members on pharmacy systems and digital prescription workflows; the front-line healthcare experience behind everything above.</li>
+        <li>Four years of high-volume transaction processing, data entry, and <strong>insurance claims resolution</strong> in enterprise systems, under strict accuracy and confidentiality standards. CPhT earned Dec 2025.</li>
+        <li>Analyzed prescription and operational data to support workflow efficiency and error reduction during peak periods; trained team members on digital workflows.</li>
       </ul>
     </div>
   </div>
@@ -207,79 +355,17 @@ footer{padding:34px 0 46px;font-family:var(--mono);font-size:.75rem;color:var(--
     <div class="job-when">Jan 2022 — Jan 2023</div>
     <div>
       <h3>Volunteer Data Analyst · <span class="org">Turning Points</span></h3>
-      <p class="subtitle">Homeless-services nonprofit · Bradenton, FL</p>
+      <p class="subtitle">Nonprofit social services · Bradenton, FL</p>
       <ul>
-        <li>Cleaned, validated, and analyzed service-utilization and outcome data; prepared summaries used in grant reporting and operational decisions.</li>
+        <li>Cleaned, validated, and reconciled datasets to improve reporting accuracy and reliability.</li>
+        <li>Analyzed service-utilization and outcome data to identify trends supporting <strong>program evaluation and grant reporting</strong>.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<section id="work">
-  <p class="sec-label">03 — Case Studies</p>
-  <h2>Selected work</h2>
-  <p style="color:var(--ink-soft);max-width:62ch">Three projects from my Veradigm internship, written to respect confidentiality: aggregate figures only, no client or vendor names, no internal system detail. Happy to go deeper on process and decisions in conversation.</p>
-
-  <article class="case">
-    <div class="case-num">01</div>
-    <h3>A single source of truth for a partner program</h3>
-    <div class="tags"><span class="tag">EXCEL → DASHBOARD</span><span class="tag">DATA RECONCILIATION</span><span class="tag">STAKEHOLDER REPORTING</span></div>
-    <h4>The problem</h4>
-    <p>A healthcare partner program's reporting lived across separate workbooks: certifications in one place, client activation requests in another, subscription accounts in a third. Answering a basic program question meant manual digging, and no two answers were guaranteed to match.</p>
-    <h4>What I did</h4>
-    <p>I consolidated the program's records into a four-tab analytics dashboard covering certifications, activations, subscriptions, and a partner directory. Every metric drills down to the underlying records and exports to CSV, so any number on screen can be traced and taken away.</p>
-    <h4>The judgment call</h4>
-    <p>Before shipping, I reconciled the dashboard field by field against the source workbooks and dropped any figure the sources couldn't support. Trust was the feature: a metric nobody can trace gets ignored, and a wrong one gets remembered.</p>
-    <h4>Outcome</h4>
-    <p>Program questions that used to require opening three workbooks now have one answer in one place. The dashboard went through 18 versions of stakeholder feedback and reconciliation passes before I called it done.</p>
-    <div class="stat-row">
-      <div class="stat"><b>3,000+</b><span>records consolidated</span></div>
-      <div class="stat"><b>4</b><span>integrated views</span></div>
-      <div class="stat"><b>100%</b><span>metrics traceable to source</span></div>
-    </div>
-  </article>
-
-  <article class="case">
-    <div class="case-num">02</div>
-    <h3>Baselining support burden across 700+ vendors</h3>
-    <div class="tags"><span class="tag">DATA ANALYSIS</span><span class="tag">TAXONOMY DESIGN</span><span class="tag">PERFORMANCE ENGINEERING</span></div>
-    <h4>The problem</h4>
-    <p>A support-reduction initiative needed a starting line. Roughly 11,000 developer-support tickets spanning 700+ vendors existed only as unstructured titles in a queue. Nobody could say where the burden actually came from, so nobody could say whether it was shrinking.</p>
-    <h4>What I did</h4>
-    <p>I derived a two-level classification taxonomy (12 categories, ~35 topics) from the unstructured ticket titles and applied it across the full dataset with zero uncategorized records. That made the distribution visible for the first time: a small group of vendors drove nearly half of all ticket volume, and self-service opportunities clustered in a handful of predictable categories.</p>
-    <h4>The judgment call</h4>
-    <p>The analysis shipped as a self-contained browser dashboard, which started at 2.3&nbsp;MB and was too heavy to share. I rebuilt the data layer with dictionary encoding, column-oriented storage, and compression, cutting it to 466&nbsp;KB. I used AI tools heavily for the refactor, then verified full data parity myself across every record and field before anyone saw it. Faster is worthless if it's quietly wrong.</p>
-    <h4>Outcome</h4>
-    <p>The initiative got measurable baselines for its key results, and leadership got a shareable view of where support effort actually goes instead of anecdotes about it.</p>
-    <div class="stat-row">
-      <div class="stat"><b>~11K</b><span>tickets analyzed</span></div>
-      <div class="stat"><b>0</b><span>uncategorized records</span></div>
-      <div class="stat"><b>4.9×</b><span>smaller payload, full parity</span></div>
-    </div>
-  </article>
-
-  <article class="case">
-    <div class="case-num">03</div>
-    <h3>An EHR data-quality dashboard, presented to leadership</h3>
-    <div class="tags"><span class="tag">UX &amp; VISUALIZATION</span><span class="tag">ALERT DESIGN</span><span class="tag">TEAM OF 4 · 5 WEEKS</span></div>
-    <h4>The problem</h4>
-    <p>Healthcare data analysts working inside a client's EHR data can't easily see when data quality slips, or where. Our four-person team entered Veradigm's internal innovation challenge with a data-quality dashboard built for exactly that person, and five weeks to make it real.</p>
-    <h4>What I owned</h4>
-    <p>Two of the six workstreams: the interface and the alerting. The design rule for the interface was the first thirty seconds: opening the dashboard should tell you what's wrong, where, and how serious, before you click anything. The alerting side was about who hears when a metric slips, and how to route that without drowning people in noise.</p>
-    <h4>The judgment call</h4>
-    <p>Privacy shaped the design as much as usability: views masked by default, small cells suppressed, every data reveal written to a log. And a week before presenting, we cut every claim the shipped code didn't actually back. Our refresh ran on a daily cycle, not in real time, and saying that plainly on stage beat getting caught on it in Q&amp;A.</p>
-    <h4>Outcome</h4>
-    <p>We presented to a senior leadership panel in July 2026 and took five minutes of questions tougher than any of our dry runs, which is what we had practiced for. Precise beat polished.</p>
-    <div class="stat-row">
-      <div class="stat"><b>15:00</b><span>on the leadership clock</span></div>
-      <div class="stat"><b>2 of 6</b><span>workstreams owned</span></div>
-      <div class="stat"><b>30s</b><span>time-to-understanding target</span></div>
-    </div>
-  </article>
-</section>
-
 <section id="skills">
-  <p class="sec-label">04 — Skills</p>
+  <p class="sec-label">05 — Skills</p>
   <h2>What I work with</h2>
   <div class="skills-grid">
     <div>
@@ -292,27 +378,30 @@ footer{padding:34px 0 46px;font-family:var(--mono);font-size:.75rem;color:var(--
         <li>Python</li>
         <li>Data cleaning, validation &amp; reconciliation</li>
         <li>Dashboard design &amp; development</li>
+        <li>Trend &amp; distribution analysis</li>
       </ul>
     </div>
     <div>
-      <h3>Healthcare domain</h3>
-      <ul>
-        <li>EHR / EMR ecosystems</li>
-        <li>Pharmacy operations (CPhT)</li>
-        <li>Insurance claims workflows</li>
-        <li>HIPAA-aware data handling</li>
-        <li>FHIR / HL7 (conceptual)</li>
-        <li>Healthcare partner &amp; marketplace ops</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Ways of working</h3>
+      <h3>Business &amp; operations</h3>
       <ul>
         <li>Requirements gathering</li>
-        <li>Stakeholder communication</li>
-        <li>Technical documentation</li>
-        <li>AI-assisted analysis, hand-verified</li>
+        <li>Stakeholder communication &amp; reporting</li>
+        <li>KPI &amp; baseline definition</li>
         <li>Process &amp; workflow analysis</li>
+        <li>Technical documentation</li>
+        <li>Cross-functional collaboration</li>
+        <li>AI-assisted analysis, hand-verified</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Domain &amp; systems</h3>
+      <ul>
+        <li>EHR / EMR ecosystems</li>
+        <li>Insurance claims workflows</li>
+        <li>Pharmacy &amp; retail operations</li>
+        <li>Enterprise POS &amp; healthcare systems</li>
+        <li>Compliance-sensitive data handling</li>
+        <li>HTML / CSS · JavaScript (basic)</li>
         <li>English / Spanish (fluent)</li>
       </ul>
     </div>
@@ -320,10 +409,10 @@ footer{padding:34px 0 46px;font-family:var(--mono);font-size:.75rem;color:var(--
 </section>
 
 <section id="contact" style="border-bottom:none">
-  <p class="sec-label">05 — Contact</p>
+  <p class="sec-label">06 — Contact</p>
   <h2>Let's talk</h2>
   <p class="contact-big"><a href="mailto:nminaya04@gmail.com">nminaya04@gmail.com</a></p>
-  <p style="margin-top:18px;color:var(--ink-soft);max-width:56ch">Open to business analyst, data analyst, and healthcare analytics roles. Remote, or on-site anywhere in Tampa Bay. Starting January 2027, conversations welcome now.</p>
+  <p style="margin-top:18px;color:var(--ink-soft);max-width:58ch">Open to business analyst, data analyst, BI, and operations analyst roles across industries. Remote, or on-site anywhere in Tampa Bay. Starting January 2027 — conversations welcome now.</p>
   <div class="hero-links" style="margin-top:26px">
     <a class="btn" href="https://www.linkedin.com/in/nick-sanchez-983669347/">LinkedIn</a>
     <a class="btn" href="https://github.com/nukesf">GitHub</a>
